@@ -9,25 +9,25 @@
         {
           "name": "App for players and admins",
           "slug": "app",
-          "image": "app.jpg",
+          "image": "/images/app.png",
           "description": "AirsoftApp makes events easier for Organizers and more fun for players. The app gives airsoft players a way to call out enemies or put tactics on the map without the enemies knowing."
         },
         {
           "name": "Real time user tracking",
           "slug": "real",
-          "image": "real.jpg",
+          "image": "/images/real.png",
           "description": "The application uses background GPS tracking so you and your team mates can see you on the map all the time. Organizers can see where the players are in real time, which makes it easier to organize the event and keep track of everything."
         },
         {
           "name": "Automatic point counting",
           "slug": "automatic",
-          "image": "automatic.jpg",
+          "image": "/images/automatic.png",
           "description": "In Domination game mode, players standing in the objectives acquire points which are automatically counted and you always know who the winner is. No more keeping track of who is winning and by how much. Everything is available with the app."
         },
         {
           "name": "Event Replays",
           "slug": "replays",
-          "image": "replays.jpg",
+          "image": "/images/replays.png",
           "description": "Every event is recorded in our system, and you can check the event’s replay inside the AirsoftApp to check what happened in the game. Players can access replays too. We also have an easy to use replay downloader, so you can share it on your social media."
         }
       ]

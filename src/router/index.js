@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import DestinationView from "@/views/DestinationView.vue";
+import SectionView from "@/views/SectionView.vue";
 import StartView from "@/views/StartView.vue";
 
 const router = createRouter({
@@ -19,7 +19,7 @@ const router = createRouter({
     {
       path: '/section/:slug',
       name: 'Section',
-      component: DestinationView,
+      component: SectionView,
       children: [
         {
           path: '/section/:slug/experience/:experienceSlug',

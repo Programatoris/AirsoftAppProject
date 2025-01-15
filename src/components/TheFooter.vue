@@ -16,7 +16,7 @@
       </div>
 
       <div class="socials">
-        <p>AirsoftApp 2025</p>
+        <p>AirsoftApp 2025 ©</p>
         <ul>
           <li><a href="https://discord.com/"><img src="/images/discord.png" alt="Discord Icon"></a></li>
           <li><a href="https://www.facebook.com/"><img src="/images/fb.png" alt="Facebook Icon"></a></li>
