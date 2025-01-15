@@ -1,0 +1,67 @@
+{
+  "sections": [
+    {
+      "name": "Features",
+      "slug": "features",
+      "id": 1,
+      "description": "These are AirsoftApp main Features",
+      "features": [
+        {
+          "name": "App for players and admins",
+          "slug": "app",
+          "image": "app.jpg",
+          "description": "AirsoftApp makes events easier for Organizers and more fun for players. The app gives airsoft players a way to call out enemies or put tactics on the map without the enemies knowing."
+        },
+        {
+          "name": "Real time user tracking",
+          "slug": "real",
+          "image": "real.jpg",
+          "description": "The application uses background GPS tracking so you and your team mates can see you on the map all the time. Organizers can see where the players are in real time, which makes it easier to organize the event and keep track of everything."
+        },
+        {
+          "name": "Automatic point counting",
+          "slug": "automatic",
+          "image": "automatic.jpg",
+          "description": "In Domination game mode, players standing in the objectives acquire points which are automatically counted and you always know who the winner is. No more keeping track of who is winning and by how much. Everything is available with the app."
+        },
+        {
+          "name": "Event Replays",
+          "slug": "replays",
+          "image": "replays.jpg",
+          "description": "Every event is recorded in our system, and you can check the event’s replay inside the AirsoftApp to check what happened in the game. Players can access replays too. We also have an easy to use replay downloader, so you can share it on your social media."
+        }
+      ]
+    },
+    {
+      "name": "How To Use",
+      "slug": "howtouse",
+      "id": 2,
+      "description":
+        "all about panama. Nam fermentum, leo ac lobortis tincidunt, justo felis semper nisi, sed facilisis quam ante a justo. Nam pulvinar nibh nec mi vestibulum cursus quis eget orci. Aenean faucibus faucibus ex, a imperdiet nibh luctus faucibus. Mauris porttitor, velit ac eleifend mattis, sem justo accumsan odio, ut mattis nulla nulla eu nibh. Cras justo risus, sollicitudin eget nulla a, consequat convallis tortor. Fusce eget neque metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Sed aliquam nunc id lectus sagittis, ac elementum eros egestas. Aliquam sed tempor dui."
+    },
+    {
+      "name": "Contact",
+      "slug": "contact",
+      "id": 3,
+      "description":
+        "all about hawaii. Etiam iaculis, ex in semper fringilla, lorem augue maximus lorem, in aliquet ex massa non enim. Maecenas pharetra orci eu semper pharetra. Suspendisse vel elit semper, fringilla metus ac, pulvinar justo. Vestibulum nibh lacus, pellentesque non arcu vel, efficitur eleifend lorem. Duis ultrices bibendum orci, nec laoreet elit. In vulputate massa vel massa cursus gravida. Aliquam sed lacus pulvinar, imperdiet risus at, lacinia dolor. Maecenas pellentesque arcu mattis iaculis efficitur. Maecenas quis sem pulvinar, sodales neque eget, efficitur odio."
+    }
+  ],
+  "battleroyale": [
+    {
+      "name": "Quickly create a game",
+      "slug": "quick",
+      "description": "Everything is done in the mobile app. Define the boundaries and set the game time. Start the game and let the Battleroyale adventure begin."
+    },
+    {
+      "name": "No fuss with complex settings",
+      "slug": "fuss",
+      "description": "Setting up a game takes about 5 minutes. You can do it right in the field. No need to prepare in advance."
+    },
+    {
+      "name": "Familiar to other Battleroyale games",
+      "slug": "familiar",
+      "description": "Ever dreamt about playing PUBG or Fortnite in real life? Now you can! The game is designed to be familiar to other Battleroyale games."
+    }
+  ]
+}
