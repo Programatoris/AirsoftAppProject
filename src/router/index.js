@@ -12,21 +12,14 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/start',
-      name: 'Start',
+      path: '/get-started',
+      name: 'Get Started',
       component: StartView,
     },
     {
       path: '/section/:slug',
       name: 'Section',
       component: SectionView,
-      children: [
-        {
-          path: '/section/:slug/experience/:experienceSlug',
-          name: 'Experience',
-          component: () => import('../views/ExperienceView.vue'),
-        }
-      ]
     }
   ],
 })

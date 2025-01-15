@@ -5,7 +5,7 @@
       <h2>It's time for you to have</h2>
       <h1>The best Airsoft Events</h1>
       <p>With AirsoftApp you can take your milsim events to the next level</p>
-      <RouterLink class="start-link" to="/start"><span class="button-text">Get Started</span></RouterLink>
+      <RouterLink class="start-link" to="/get-started"><span class="button-text">Get Started</span></RouterLink>
 
       <!-- App Store and Google Play Images Div -->
       <div class="store-images">
@@ -16,7 +16,7 @@
 
     <!-- Phone Image -->
     <div class="phone-image">
-      <img src="/images/phone.png" alt="Phone" class="phone-img">
+      <img src="/images/phone2.png" alt="Phone" class="phone-img">
     </div>
   </div>
 
@@ -33,7 +33,7 @@
 
   <div class="container3">
     <!-- Features Section -->
-    <h1><span class="new1">GPS Tracked Events</span></h1>
+    <h1><span class="new">GPS </span><span class="battleroyale">Tracked Events</span></h1>
     <div class="features-list">
       <!-- Loop through the features -->
       <div v-for="(feature, index) in features.slice(0, 3)" :key="feature.slug" class="feature-item">
@@ -86,6 +86,7 @@ export default {
 
 .container3 {
   margin-top: 50px;
+  padding-bottom: 80px;
 }
 
 .text-container {
@@ -148,6 +149,8 @@ p {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  height: 500px;
+  width: 200px;
 }
 
 .phone-img {

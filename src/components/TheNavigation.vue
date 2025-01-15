@@ -14,7 +14,7 @@
           {{ section.name }}
         </RouterLink>
         <div class="get-started">
-          <RouterLink class="start-link" to="/start">Get Started</RouterLink>
+          <RouterLink class="start-link" to="/get-started">Get Started</RouterLink>
         </div>
       </div>
     </nav>

@@ -1,23 +1,17 @@
 <template>
   <div>
-
+    <LoginForm />
   </div>
 </template>
 
 <script>
-import dataSections from "../data.json";
-
+import LoginForm from "@/components/LoginFormComponent.vue";
 export default {
   name: "StartView",
-  data() {
-    return {
-      destinations: dataSections.sections,
-    };
-  },
+  components: {LoginForm},
 };
 </script>
 
 <style scoped>
 
 </style>
-
