@@ -30,16 +30,22 @@ import { useLikeStore } from "@/stores/counter";
 
 export default {
   name: "LikeComponent",
-  setup() {
+  data() {
     const likeStore = useLikeStore();
 
     return {
-      liked: likeStore.liked, // Bind to store state
-      toggleLike: likeStore.toggleLike, // Call toggle action on change
+      liked: likeStore.liked,
     };
+  },
+  methods: {
+    toggleLike() {
+      const likeStore = useLikeStore();
+      likeStore.toggleLike();
+    },
   },
 };
 </script>
+
 
 <style scoped>
 #heart {

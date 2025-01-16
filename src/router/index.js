@@ -23,20 +23,15 @@ const router = createRouter({
     }
   ],
   scrollBehavior() {
-    // Always scroll to the top when navigating to a new route
     return { top: 0 };
   }
 });
 
-// Use the afterEach hook to reload the page after route navigation
 router.afterEach((to, from) => {
-  // Only reload the page if the route changes and it's not a reload loop
   if (to.path !== from.path && !localStorage.getItem('reloaded')) {
-    // Set a flag in localStorage to prevent infinite reload loops
     localStorage.setItem('reloaded', 'true');
     window.location.reload();
   } else {
-    // Clear the reload flag when the page has been reloaded
     localStorage.removeItem('reloaded');
   }
 });
