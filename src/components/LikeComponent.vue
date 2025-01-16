@@ -42,7 +42,6 @@ export default {
 </script>
 
 <style scoped>
-/* From Uiverse.io by Priyanshu02020 */
 #heart {
   display: none;
 }

@@ -35,7 +35,7 @@ export default {
 }
 
 .feature-card {
-  width: 60%; /* Controls the text box width */
+  width: 60%;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -48,7 +48,7 @@ export default {
 }
 
 .feature-image {
-  max-width: 300px; /* Adjust the image width */
+  max-width: 300px;
   height: auto;
   border-radius: 8px;
 }

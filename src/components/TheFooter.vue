@@ -35,47 +35,51 @@ export default {
 </script>
 
 <style scoped>
+/* General styles */
 footer {
   margin-top: 30px;
   background: black;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
+  align-items: center;
+  justify-content: center;
 }
 
+/* Component-specific styles */
 .text {
-  text-align: center; /* Center the text inside the div */
+  text-align: center;
   padding: 10px;
 }
 
 .links {
   display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  gap: 20px; /* Add some spacing between the icons */
+  justify-content: center;
+  gap: 20px;
   padding: 10px;
 }
 
 .socials {
   margin-top: 20px;
-  text-align: center; /* Center the social media links */
+  text-align: center;
 }
 
+/* List styles */
 .socials ul {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center; /* Center the social icons */
-  gap: 15px; /* Space between the social icons */
+  justify-content: center;
+  gap: 15px;
 }
 
 .socials li {
   display: inline-block;
 }
 
+/* Image styles */
 .socials img {
-  width: 30px; /* Adjust the size of the social icons */
+  width: 30px;
   height: auto;
 }
 

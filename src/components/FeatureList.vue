@@ -29,7 +29,7 @@ export default {
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between feature cards */
+  gap: 20px;
   flex-direction: column;
 }
 </style>

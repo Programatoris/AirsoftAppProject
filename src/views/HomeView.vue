@@ -5,35 +5,41 @@
       <h2>It's time for you to have</h2>
       <h1>The best Airsoft Events</h1>
       <p>With AirsoftApp you can take your milsim events to the next level</p>
-      <RouterLink class="start-link" to="/get-started"><span class="button-text">Get Started</span></RouterLink>
+      <RouterLink class="start-link" to="/get-started">
+        <span class="button-text">Get Started</span>
+      </RouterLink>
 
       <!-- App Store and Google Play Images Div -->
       <div class="store-images">
         <a href="https://play.google.com/store/games?device=windows">
-          <img src="/images/gglplay.jpg" alt="Google Play Icon" class="store-image">
+          <img src="/images/gglplay.jpg" alt="Google Play Icon" class="store-image" />
         </a>
         <a href="https://www.apple.com/app-store/">
-          <img src="/images/appstr.jpg" alt="App Store Icon" class="store-image">
+          <img src="/images/appstr.jpg" alt="App Store Icon" class="store-image" />
         </a>
       </div>
 
+      <!-- Likes Section -->
       <div class="likes">
         <p>Show us your support</p>
-        <icon-pointing class="pointing"/>
+        <icon-pointing class="pointing" />
         <like-component />
       </div>
     </div>
 
     <!-- Phone Image -->
     <div class="phone-image">
-      <img src="/images/phone2.png" alt="Phone" class="phone-img">
+      <img src="/images/phone2.png" alt="Phone" class="phone-img" />
     </div>
   </div>
 
+  <!-- Battleroyale Section -->
   <div class="container2">
-    <h1><span class="new">NEW!!! </span><span class="battleroyale">Battleroyale</span></h1>
+    <h1>
+      <span class="new">NEW!!! </span>
+      <span class="battleroyale">Battleroyale</span>
+    </h1>
     <div class="battleroyale-list">
-      <!-- Loop through battleroyales -->
       <div v-for="battleroyale in battleroyale" :key="battleroyale.slug" class="battleroyale-item">
         <h2>{{ battleroyale.name }}</h2>
         <p>{{ battleroyale.description }}</p>
@@ -41,21 +47,20 @@
     </div>
   </div>
 
+  <!-- Features Section -->
   <div class="container3">
-    <!-- Features Section -->
-    <h1><span class="new">GPS </span><span class="battleroyale">Tracked Events</span>
+    <h1>
+      <span class="new">GPS </span>
+      <span class="battleroyale">Tracked Events</span>
     </h1>
     <div class="features-list">
-      <!-- Loop through the features -->
       <div v-for="(feature, index) in features.slice(0, 3)" :key="feature.slug" class="feature-item">
         <h2>{{ feature.name }}</h2>
         <p>{{ feature.description }}</p>
       </div>
-
       <div class="explore-link">
-        <!-- Link for "Explore All Features" -->
         <RouterLink to="/section/features" class="bk">Explore All Features</RouterLink>
-        <icon-pointing class="pointing"/>
+        <icon-pointing class="pointing" />
       </div>
     </div>
   </div>
@@ -69,84 +74,18 @@ import IconPointing from "@/components/icons/IconPointing.vue";
 
 export default {
   name: "HomeView",
-  components: {IconPointing, LikeComponent},
+  components: { IconPointing, LikeComponent },
   data() {
     return {
       battleroyale: dataBattleroyales.battleroyale,
-      features: data.sections.find(section => section.slug === "features")?.features || []
+      features: data.sections.find((section) => section.slug === "features")?.features || [],
     };
   },
 };
 </script>
 
 <style scoped>
-.explore-link {
-  display: flex;
-  justify-content: flex-end; /* Align the link to the right */
-  position: absolute; /* Take it out of the normal flow and position it manually */
-  bottom: -35px; /* Adjust as needed to position it at the bottom */
-  right: 0; /* Align to the right side of the container */
-  width: 100%; /* Ensure it takes up the full width of its container */
-  gap: 10px;
-  color: black;
-  align-items: center;
-}
-
-/* Hover effect for the entire explore-link container */
-.explore-link:hover {
-  color: orange; /* Change the text and icon color on hover */
-}
-
-.explore-link .bk {
-  transition: color 0.3s ease; /* Smooth transition for text color */
-}
-
-.explore-link .pointing {
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for icon color and potential movement */
-  color: black; /* Ensure the icon starts with black color */
-}
-
-/* Change color of the icon on hover */
-.explore-link:hover .pointing {
-  color: orange; /* Make the icon orange when the link is hovered */
-  transform: translateX(5px); /* Slightly move the icon on hover for better effect */
-}
-
-.bk {
-  color: black;
-  text-decoration: underline;
-}
-
-.bk:hover {
-  color: orange; /* Change text color on hover */
-}
-
-.new {
-  color: orange;
-}
-
-.battleroyale {
-  color: black;
-}
-
-.likes {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: left; /* Horizontally center the contents */
-  align-items: center;     /* Vertically center the contents */
-  width: 100%;             /* Ensure the container takes full width */
-}
-
-.likes p {
-  margin: 0;             /* Reset any default margin */
-  line-height: 1;        /* Ensure consistent vertical alignment */
-}
-
-.pointing {
-  width: 30px;
-}
-
+/* General Styles */
 .container {
   font-size: 20px;
   display: flex;
@@ -172,7 +111,11 @@ export default {
   align-items: flex-start;
 }
 
-h2, h1, p, .start-link {
+/* Typography */
+h2,
+h1,
+p,
+.start-link {
   margin: 0;
   padding: 0;
   color: black;
@@ -191,6 +134,7 @@ p {
   font-weight: bold;
 }
 
+/* Links and Buttons */
 .start-link {
   background: orange;
   padding: 12px;
@@ -209,6 +153,75 @@ p {
   opacity: 1;
 }
 
+.bk {
+  color: black;
+  text-decoration: underline;
+}
+
+.bk:hover {
+  color: orange;
+}
+
+/* Explore Link */
+.explore-link {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: -35px;
+  right: 0;
+  width: 100%;
+  gap: 10px;
+  color: black;
+  align-items: center;
+}
+
+.explore-link:hover {
+  color: orange;
+}
+
+.explore-link .bk {
+  transition: color 0.3s ease;
+}
+
+.explore-link .pointing {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: black;
+}
+
+.explore-link:hover .pointing {
+  color: orange;
+  transform: translateX(5px);
+}
+
+/* Highlights */
+.new {
+  color: orange;
+}
+
+.battleroyale {
+  color: black;
+}
+
+/* Likes Section */
+.likes {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
+
+.likes p {
+  margin: 0;
+  line-height: 1;
+}
+
+.pointing {
+  width: 30px;
+}
+
+/* Store Images */
 .store-images {
   display: flex;
   gap: 20px;
@@ -220,6 +233,7 @@ p {
   max-height: 100px;
 }
 
+/* Phone Image */
 .phone-image {
   display: flex;
   justify-content: flex-end;
@@ -233,7 +247,7 @@ p {
   border-radius: 10px;
 }
 
-/* CSS Grid for Battleroyale Items */
+/* Battleroyale Grid */
 .battleroyale-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -258,7 +272,7 @@ p {
   color: #555;
 }
 
-/* CSS Grid for Features */
+/* Features Grid */
 .features-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

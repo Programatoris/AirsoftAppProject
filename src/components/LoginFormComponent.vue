@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style scoped>
+/* General container styles */
 .login-container {
   display: flex;
   justify-content: center;
@@ -36,6 +37,7 @@ export default {
   margin-bottom: 200px;
 }
 
+/* Form styles */
 .login-form {
   background: white;
   padding: 40px;
@@ -52,6 +54,7 @@ export default {
   color: #333;
 }
 
+/* Form group styles */
 .form-group {
   margin-bottom: 15px;
   text-align: left;
@@ -63,6 +66,7 @@ label {
   font-weight: bold;
 }
 
+/* Input styles */
 input {
   width: 100%;
   padding: 10px;
@@ -72,14 +76,15 @@ input {
 
 input:focus {
   outline: none;
-  border-color: #fcd34d; /* Yellow contrast */
+  border-color: #fcd34d;
   box-shadow: 0 0 4px rgba(252, 211, 77, 0.5);
 }
 
+/* Button styles */
 .login-button {
   width: 100%;
   padding: 10px;
-  background-color: orange; /* Yellow contrast */
+  background-color: orange;
   color: white;
   border: none;
   border-radius: 4px;
@@ -89,16 +94,17 @@ input:focus {
 }
 
 .login-button:hover {
-  background-color: orange; /* Darker yellow for hover */
+  background-color: orange;
 }
 
+/* Register link styles */
 .register-link {
   margin-top: 15px;
   font-size: 14px;
 }
 
 .register-link a {
-  color: orange; /* Yellow contrast */
+  color: orange;
   text-decoration: none;
 }
 
