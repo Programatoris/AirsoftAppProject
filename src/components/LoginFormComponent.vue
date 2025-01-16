@@ -94,7 +94,7 @@ input:focus {
 }
 
 .login-button:hover {
-  background-color: orange;
+  background-color: darkorange;
 }
 
 /* Register link styles */

@@ -396,6 +396,7 @@ export default {
   color: white;
   text-decoration: none;
   margin-top: 20px;
+  transition: background-color 0.3s;
 }
 
 .button:hover {

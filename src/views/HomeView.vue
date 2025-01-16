@@ -143,6 +143,11 @@ p {
   color: black;
   font-weight: bold;
   margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.start-link:hover {
+  background: darkorange;
 }
 
 .start-link .button-text {

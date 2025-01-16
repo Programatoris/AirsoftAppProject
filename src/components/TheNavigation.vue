@@ -73,7 +73,7 @@ export default {
   margin-right: 20px;
   color: black;
   opacity: 0.7;
-  transition: 0.2s ease color;
+  transition: 0.3s ease color;
 }
 
 #nav a.router-link-active {
@@ -104,6 +104,12 @@ export default {
   background: orange;
   padding: 10px 0px 10px 15px;
   border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.get-started:hover {
+  background: darkorange;
+  color: black;
 }
 
 a {
