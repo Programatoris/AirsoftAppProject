@@ -9,8 +9,18 @@
 
       <!-- App Store and Google Play Images Div -->
       <div class="store-images">
-        <img src="/images/appstr.jpg" alt="google_play" class="store-image">
-        <img src="/images/gglplay.jpg" alt="app_store" class="store-image">
+        <a href="https://play.google.com/store/games?device=windows">
+          <img src="/images/gglplay.jpg" alt="Google Play Icon" class="store-image">
+        </a>
+        <a href="https://www.apple.com/app-store/">
+          <img src="/images/appstr.jpg" alt="App Store Icon" class="store-image">
+        </a>
+      </div>
+
+      <div class="likes">
+        <p>Show us your support</p>
+        <icon-pointing class="pointing"/>
+        <like-component />
       </div>
     </div>
 
@@ -47,9 +57,12 @@
 <script>
 import data from "../data.json";
 import dataBattleroyales from "../data.json";
+import LikeComponent from "@/components/LikeComponent.vue";
+import IconPointing from "@/components/icons/IconPointing.vue";
 
 export default {
   name: "HomeView",
+  components: {IconPointing, LikeComponent},
   data() {
     return {
       battleroyale: dataBattleroyales.battleroyale,
@@ -64,14 +77,27 @@ export default {
   color: orange;
 }
 
-.new1 {
-  color: black;
-}
-
 .battleroyale {
   color: black;
 }
 
+.likes {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: left; /* Horizontally center the contents */
+  align-items: center;     /* Vertically center the contents */
+  width: 100%;             /* Ensure the container takes full width */
+}
+
+.likes p {
+  margin: 0;             /* Reset any default margin */
+  line-height: 1;        /* Ensure consistent vertical alignment */
+}
+
+.pointing {
+  width: 30px;
+}
 .container {
   font-size: 20px;
   display: flex;
@@ -155,18 +181,7 @@ p {
 
 .phone-img {
   max-width: 250px;
-}
-
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .phone-image {
-    margin-top: 20px;
-  }
+  border-radius: 10px;
 }
 
 /* CSS Grid for Battleroyale Items */

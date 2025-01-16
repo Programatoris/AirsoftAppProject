@@ -1,12 +1,19 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import { ref, watch } from 'vue';
+import { defineStore } from 'pinia';
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
+export const useLikeStore = defineStore('like', () => {
+  // Initialize `liked` from localStorage or default to false
+  const liked = ref(localStorage.getItem('liked') === 'true');
+
+  // Watch for changes in the liked state and persist it to localStorage
+  watch(liked, (newLikedState) => {
+    localStorage.setItem('liked', newLikedState);
+  });
+
+  // Function to toggle the like state
+  function toggleLike() {
+    liked.value = !liked.value;
   }
 
-  return { count, doubleCount, increment }
-})
+  return { liked, toggleLike };
+});

@@ -59,6 +59,7 @@
         </div>
       </div>
     </div>
+
     <!-- Contact Section -->
     <div v-if="section.slug === 'contact'" class="more-features2">
       <div class="contact-content">
@@ -87,6 +88,78 @@
         <div class="player">
           <img src="/images/masked.png" alt="Player">
         </div>
+      </div>
+    </div>
+
+    <!-- how to use section -->
+    <div v-if="section.slug === 'how-to-use'" class="more-features3">
+      <div class="step1">
+        <h2>Step 1 - Register</h2>
+        <p>Go to the Organiser panel and register to become an event organiser</p>
+        <p>After registration proceed to creating your first field of battle</p>
+      </div>
+
+      <div class="step2">
+        <h2>Step 2 - Creating your battlefield</h2>
+        <ul>
+          <li>Go to fields and press „create a new field“</li>
+          <li>Upload a field image</li>
+          <li>Give your field a name</li>
+        </ul>
+        <p>OPTIONAL, but recommended if you intend to use this field more than once</p>
+        <h3>Create zones(These will be later assigned for spawns, objectives, quests and danger zones):</h3>
+        <div class="step2-contents">
+          <div>
+            <ul>
+              <li>Find your field on the map</li>
+              <li>Using the draw polygon or draw circle functions you will need to draw areas</li>
+              <li>It is required to have at least 2 spawn points and 1 objective point</li>
+              <li>Set a center for your field and a parking location</li>
+              <li>Name your areas (Use easy to understand names, because you will need to assign functions to them)</li>
+            </ul>
+          </div>
+
+          <div>
+            <img src="/images/map.png" alt="Map" class="map-image">
+          </div>
+        </div>
+      </div>
+
+      <div class="step3">
+        <h2>Step 3 – Creating an event</h2>
+        <ul>
+          <li>In the games tab, Press „new game“</li>
+          <li>Upload event cover picture</li>
+          <li>Choose a game (event) name</li>
+          <li>Add game description</li>
+        </ul>
+        <h3>Configuring your field</h3>
+
+        <div class="creating-field">
+          <div>
+            <p>Assign functions for the areas you have drawn with circle or polygon tool when creating a field:</p>
+            <ul>
+              <li>Spawns</li>
+              <li>Objectives</li>
+              <li>Quests</li>
+              <li>Fortresses</li>
+              <li>Danger zones</li>
+            </ul>
+          </div>
+
+          <div>
+            <img src="/images/areas.png" alt="Areas" class="areas-image">
+          </div>
+        </div>
+      </div>
+
+      <div class="settings">
+        <h2>Settings (Advanced)</h2>
+        <ul>
+          <li>Set player health and bleeding damage</li>
+          <li>Set damage from danger zones</li>
+          <li>Set time it takes to respawn on being shot, players will start to bleed with X bleeding damage per second. They can get revived by scanning a medic's QR code. If they bleed out to 0 health, they will die. Set this number to the amount of seconds you want them to wait for medic. Standing in danger zones also reduces players health. Players with lower health will have less time to be revived after being shot</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -144,6 +217,33 @@ export default {
   font-size: 40px;
 }
 
+.creating-field {
+  display: flex;
+  flex-direction: row;
+}
+
+.areas-image {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.map-image {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.step2-contents {
+  display: flex;
+  flex-direction: row;
+}
+.step2 {
+  margin-top: 80px;
+}
+
+.settings {
+  margin-bottom: 60px;
+}
+
 .more-features {
   margin-top: 50px;
   display: flex;
@@ -172,6 +272,10 @@ export default {
 
 .more-features2 {
   margin-top: 50px;
+}
+
+.more-features3 h2{
+  text-decoration: orange underline;
 }
 
 .contact-content {

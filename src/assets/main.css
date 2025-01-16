@@ -37,51 +37,6 @@ a:visited {
   max-width: 960px;
 }
 
-/* Home */
-.home img {
-  max-width: 230px;
-}
-
-.home .destinations {
-  display: flex;
-  justify-content: space-between;
-  display: inline;
-}
-
-.experiences {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.experience-card {
-  width: 200px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 10px;
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
-}
-
-.experience-card:hover {
-  transform: scale(1.05);
-}
-
-/* Detaily destinácie */
-.destination-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
-  padding: 20px 0;
-}
-
-/* Navbar */
 #nav {
   position: fixed;
   top: 0;
