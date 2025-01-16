@@ -45,6 +45,7 @@ export default {
 .feature-text h2 {
   margin-bottom: 10px;
   font-size: 1.5rem;
+  text-decoration: orange underline;
 }
 
 .feature-image {
