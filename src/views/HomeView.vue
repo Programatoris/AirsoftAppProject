@@ -43,12 +43,19 @@
 
   <div class="container3">
     <!-- Features Section -->
-    <h1><span class="new">GPS </span><span class="battleroyale">Tracked Events</span></h1>
+    <h1><span class="new">GPS </span><span class="battleroyale">Tracked Events</span>
+    </h1>
     <div class="features-list">
       <!-- Loop through the features -->
       <div v-for="(feature, index) in features.slice(0, 3)" :key="feature.slug" class="feature-item">
         <h2>{{ feature.name }}</h2>
         <p>{{ feature.description }}</p>
+      </div>
+
+      <div class="explore-link">
+        <!-- Link for "Explore All Features" -->
+        <RouterLink to="/section/features" class="bk">Explore All Features</RouterLink>
+        <icon-pointing class="pointing"/>
       </div>
     </div>
   </div>
@@ -73,6 +80,47 @@ export default {
 </script>
 
 <style scoped>
+.explore-link {
+  display: flex;
+  justify-content: flex-end; /* Align the link to the right */
+  position: absolute; /* Take it out of the normal flow and position it manually */
+  bottom: -35px; /* Adjust as needed to position it at the bottom */
+  right: 0; /* Align to the right side of the container */
+  width: 100%; /* Ensure it takes up the full width of its container */
+  gap: 10px;
+  color: black;
+  align-items: center;
+}
+
+/* Hover effect for the entire explore-link container */
+.explore-link:hover {
+  color: orange; /* Change the text and icon color on hover */
+}
+
+.explore-link .bk {
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.explore-link .pointing {
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for icon color and potential movement */
+  color: black; /* Ensure the icon starts with black color */
+}
+
+/* Change color of the icon on hover */
+.explore-link:hover .pointing {
+  color: orange; /* Make the icon orange when the link is hovered */
+  transform: translateX(5px); /* Slightly move the icon on hover for better effect */
+}
+
+.bk {
+  color: black;
+  text-decoration: underline;
+}
+
+.bk:hover {
+  color: orange; /* Change text color on hover */
+}
+
 .new {
   color: orange;
 }
@@ -98,6 +146,7 @@ export default {
 .pointing {
   width: 30px;
 }
+
 .container {
   font-size: 20px;
   display: flex;
@@ -216,6 +265,7 @@ p {
   gap: 20px;
   margin-top: 40px;
   font-weight: bold;
+  position: relative;
 }
 
 .feature-item {
